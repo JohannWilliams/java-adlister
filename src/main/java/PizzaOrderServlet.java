@@ -13,7 +13,7 @@ public class PizzaOrderServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.sendRedirect("http://localhost:8080/pizza_form.jsp");
+        resp.sendRedirect("http://localhost:8080/pizza-order.jsp");
     }
 
     @Override
