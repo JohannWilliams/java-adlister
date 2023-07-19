@@ -9,10 +9,13 @@
 <html>
 <head>
     <title>8080 Profile</title>
+    <%@ include file="partials/head.jsp" %>
 </head>
 <body>
 <body>
+    <%@ include file="partials/navbar.jsp" %>
     <h1>Welcome!</h1>
+    <%@ include file="partials/bs_scripts.jsp" %>
 </body>
 </body>
 </html>

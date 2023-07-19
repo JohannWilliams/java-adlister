@@ -10,15 +10,20 @@
 <html>
 <head>
     <title>8080 Login</title>
+    <%@ include file="partials/head.jsp" %>
 </head>
 <body>
 <main>
+    <%@ include file="partials/navbar.jsp" %>
     <form action="login.jsp" method="post">
-        <label for="username">Username: </label>
-        <input type="text" name="username" id="username">
-        <label for="password">Password: </label>
-        <input type="password" name="password" id="password">
-        <input type="submit" value="submit" name="submit">
+        <div class="m-5">
+            <label class="form-label" for="username">Username: </label>
+            <input class="form-control mb-3" type="text" name="username" id="username">
+            <label class="form-label" for="password">Password: </label>
+            <input class="form-control mb-3" type="password" name="password" id="password">
+            <input type="submit" value="submit" name="submit">
+        </div>
+
     </form>
 
     <c:if test="${param.submit != null}">
@@ -31,6 +36,8 @@
             </c:otherwise>
         </c:choose>
     </c:if>
+
+    <%@ include file="partials/bs_scripts.jsp" %>
 </main>
 </body>
 </html>
