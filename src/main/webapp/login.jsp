@@ -24,10 +24,10 @@
     <c:if test="${param.submit != null}">
         <c:choose>
             <c:when test="${param.username == 'admin' && param.password == 'password'}">
-                    <% response.sendRedirect("/profile.jsp"); %>
+                <% response.sendRedirect("/profile.jsp"); %>
             </c:when>
             <c:otherwise>
-
+                <% response.sendRedirect("/login.jsp"); %>
             </c:otherwise>
         </c:choose>
     </c:if>
