@@ -24,7 +24,7 @@ public class PizzaOrderServlet extends HttpServlet {
         String sauce = req.getParameter("sauce");
         String[] toppings = req.getParameterValues("toppings");
 
-        System.out.println(String.format("Deliver to: %s.%n%s size %s pizza.%nWith %s sauce.%nTopped with %s.%n", address, size, crust, sauce, Arrays.toString(toppings)));
+        System.out.println(String.format("Deliver to: %s.%n%s size.%n%s pizza.%n%s sauce.%nTopped with %s.%n", address, size, crust, sauce, Arrays.toString(toppings)));
 
     }
 }

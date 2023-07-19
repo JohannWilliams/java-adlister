@@ -30,8 +30,8 @@
 
         <input type="radio" name="crust" value="thin" id="radioCrust1">
         <label for="radioCrust1"> Thin Crust </label>
-        <input type="radio" name="crust" value="hand" id="radioCrust2">
-        <label for="radioCrust2"> Hand tossed </label>
+        <input type="radio" name="crust" value="hand_tossed" id="radioCrust2">
+        <label for="radioCrust2"> Hand Tossed </label>
         <input type="radio" name="crust" value="original" id="radioCrust3">
         <label for="radioCrust3"> Original </label>
 
