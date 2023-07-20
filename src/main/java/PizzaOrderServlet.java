@@ -4,8 +4,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Arrays;
 
 @WebServlet(name = "PizzaOrderServlet", urlPatterns = "/pizza-order")
@@ -13,7 +11,7 @@ public class PizzaOrderServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.sendRedirect("http://localhost:8080/pizza-order.jsp");
+        req.getRequestDispatcher("/pizza-order.jsp").forward(req, resp);
     }
 
     @Override

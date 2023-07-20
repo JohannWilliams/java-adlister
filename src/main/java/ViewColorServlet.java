@@ -10,7 +10,7 @@ import java.io.PrintWriter;
 public class ViewColorServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.sendRedirect("http://localhost:8080/viewcolor.jsp");
+        req.getRequestDispatcher("/viewcolor.jsp").forward(req, resp);
     }
 
     @Override
