@@ -73,8 +73,12 @@
             <input id="jalapeno_peppers" type="checkbox" name="toppings" value="jalapeno_peppers"> Jalapeno Peppers
         </label>
 
+        <br>
+
         <label for="delivery_address">Delivery Address:</label>
         <input type="text" name="delivery_address" id="delivery_address">
+
+        <br>
 
         <input type="submit">
     </form>
