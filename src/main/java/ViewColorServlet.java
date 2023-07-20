@@ -15,10 +15,8 @@ public class ViewColorServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        PrintWriter out = resp.getWriter();
-
         String bgColor = req.getParameter("color");
-
-        out.println("<style>body {background-color:" + bgColor + "}</style>");
+        req.setAttribute("bgColor", bgColor);
+        req.getRequestDispatcher("/viewcolor.jsp").forward(req, resp);
     }
 }

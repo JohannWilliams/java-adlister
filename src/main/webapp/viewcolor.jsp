@@ -11,6 +11,11 @@
   <jsp:include page="partials/head.jsp">
     <jsp:param name="title" value="View Color" />
   </jsp:include>
+  <style>
+    body {
+      background-color: ${bgColor};
+    }
+  </style>
 </head>
 <body>
 <header>
