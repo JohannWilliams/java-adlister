@@ -10,11 +10,6 @@ import java.io.PrintWriter;
 public class ViewColorServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/viewcolor.jsp").forward(req, resp);
-    }
-
-    @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String bgColor = req.getParameter("color");
         req.setAttribute("bgColor", bgColor);
         req.getRequestDispatcher("/viewcolor.jsp").forward(req, resp);

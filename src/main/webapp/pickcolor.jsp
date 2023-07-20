@@ -15,7 +15,7 @@
 <body>
 <header>
     <jsp:include page="partials/navbar.jsp" />
-    <form action="/viewcolor" method="post">
+    <form action="/pickcolor" method="post">
         <label for="color">Favorite Color: </label>
         <input type="text" name="color" id="color">
 
