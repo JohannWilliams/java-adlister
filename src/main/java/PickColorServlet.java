@@ -9,7 +9,7 @@ import java.io.IOException;
 public class PickColorServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.sendRedirect("http://localhost:8080/pickcolor.jsp");
+        req.getRequestDispatcher("/pickcolor.jsp").forward(req, resp);
     }
 
     @Override
