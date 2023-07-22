@@ -1,13 +1,21 @@
+package dao;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import com.mysql.cj.jdbc.Driver;
 
 public class MySQLAdsDao implements Ads{
 
     private Connection connection;
 
     public MySQLAdsDao(Config config) throws SQLException {
-        this.connection = DriverManager.getConnection(
+
+        System.out.println("config.getUrl() = " + config.getUrl());
+        System.out.println("config.getUser() = " + config.getUser());
+        System.out.println("config.getPassword() = " + config.getPassword());
+        DriverManager.registerDriver(new Driver());
+        connection = DriverManager.getConnection(
                 config.getUrl(),
                 config.getUser(),
                 config.getPassword()
@@ -38,7 +46,11 @@ public class MySQLAdsDao implements Ads{
     @Override
     public Long insert(Ad ad) {
 
-        String queryStringAd = String.format("INSERT INTO ads(id, user_id, title, description) values(%d, %d, %s, %s)", ad.getId(), ad.getUserId(), ad.getTitle(), ad.getDescription());
+        long id = ad.getId();
+        String title = ad.getTitle();
+        String description = ad.getDescription();
+
+        String queryStringAd = "INSERT INTO ads (user_id, title, description) VALUES (" + ad.getUserId() + ",'" +  ad.getTitle() + "','" + ad.getDescription() +"')";
 
         long insertedID = 0;
         try {
