@@ -1,6 +1,6 @@
-package models;
+package controllers;
 
-import dao.Ad;
+import models.Ad;
 import dao.DaoFactory;
 
 import javax.servlet.ServletException;
@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "models.CreateAdServlet", urlPatterns = "/ads/create")
+@WebServlet(name = "controllers.CreateAdServlet", urlPatterns = "/ads/create")
 public class CreateAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("/WEB-INF/ads/create.jsp")

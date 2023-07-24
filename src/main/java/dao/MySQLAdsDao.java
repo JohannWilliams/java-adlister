@@ -4,8 +4,9 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import com.mysql.cj.jdbc.Driver;
+import models.Ad;
 
-public class MySQLAdsDao implements Ads{
+public class MySQLAdsDao implements Ads {
 
     private Connection connection;
 

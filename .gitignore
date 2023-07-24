@@ -3,4 +3,3 @@ target/
 .idea/
 perm_partials
 Config.java
-ConfigJDBCLec.java
