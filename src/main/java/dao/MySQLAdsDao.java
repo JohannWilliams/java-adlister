@@ -9,17 +9,18 @@ public class MySQLAdsDao implements Ads{
 
     private Connection connection;
 
-    public MySQLAdsDao(Config config) throws SQLException {
+    public MySQLAdsDao(Config config) {
 
-        System.out.println("config.getUrl() = " + config.getUrl());
-        System.out.println("config.getUser() = " + config.getUser());
-        System.out.println("config.getPassword() = " + config.getPassword());
-        DriverManager.registerDriver(new Driver());
-        connection = DriverManager.getConnection(
-                config.getUrl(),
-                config.getUser(),
-                config.getPassword()
-        );
+        try {
+            DriverManager.registerDriver(new Driver());
+            connection = DriverManager.getConnection(
+                    config.getUrl(),
+                    config.getUser(),
+                    config.getPassword()
+            );
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
